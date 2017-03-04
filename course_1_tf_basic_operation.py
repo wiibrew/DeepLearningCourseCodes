@@ -1,7 +1,14 @@
+'''
+basic tf operation examples, 
+1. write a tf function use tf.xxxx
+2. feed data to tf.placeholder and set data to tf.Variable
+3.run...
+'''
+
 #
 import tensorflow as tf
 
-# 
+# direct sum with constand value
 a = tf.constant(2)
 b = tf.constant(3)
 c=a+b
@@ -29,7 +36,7 @@ matrix2 = tf.constant([[2.],[2.]])
 product = tf.matmul(matrix2, matrix1)
 print sess.run(product)
 
-#
+#here you should also be able to use tf.placeholder
 mat1=tf.Variable(tf.random_normal([3,2]))
 mat2=tf.Variable(tf.random_normal([2,3]))
 product=tf.matmul(mat1,mat2)
