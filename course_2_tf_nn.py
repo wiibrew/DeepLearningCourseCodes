@@ -35,8 +35,14 @@ def multilayer_perceptron(x, weights, biases):
     layer_2 = tf.add(tf.matmul(layer_1, weights['h2']), biases['b2'])
     layer_2 = tf.nn.relu(layer_2)
 
+    # layer_3 = tf.add(tf.matmul(layer_2, weights['h3']), biases['b3'])
+    # layer_3 = tf.nn.relu(layer_3)
+
+
+
     #we can add dropout layer
     # drop_out = tf.nn.dropout(layer_2, 0.75)
+
 
 
     # Output layer with linear activation
@@ -45,13 +51,16 @@ def multilayer_perceptron(x, weights, biases):
 
 # Store layers weight & biases
 weights = {
+    #you can change 
     'h1': tf.Variable(tf.random_normal([n_input, n_hidden_1])),
     'h2': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
+    #'h3': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
     'out': tf.Variable(tf.random_normal([n_hidden_2, n_classes]))
 }
 biases = {
     'b1': tf.Variable(tf.random_normal([n_hidden_1])),
     'b2': tf.Variable(tf.random_normal([n_hidden_2])),
+    #'b3': tf.Variable(tf.random_normal([n_hidden_2])),
     'out': tf.Variable(tf.random_normal([n_classes]))
 }
 
