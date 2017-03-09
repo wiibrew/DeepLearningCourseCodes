@@ -1,2 +1,5 @@
-!/.gitignore
-!/model/
+!.gitignore
+!model/
+!.git
+!.DS_Store
+!course_example_vgg/.DS_Store
