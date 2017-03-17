@@ -1,0 +1,7 @@
+1. download the training data and unzip at this folder, dataset from https://drive.google.com/open?id=0B3ANX1iL124qbmxOc2cyQzhvUFE
+2. download the pretrained tflearn vgg model from https://www.dropbox.com/s/9li9mi4105jf45v/vgg16.tflearn?dl=0
+3. go through the code, make sure all the path are correct
+
+run and wait...
+
+
