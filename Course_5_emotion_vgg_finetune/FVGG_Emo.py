@@ -2,6 +2,9 @@
 Retraining (Finetuning) Example with vgg.tflearn. Using weights from VGG model to retrain
 network for a new task (your own dataset).All weights are restored except
 last layer (softmax) that will be retrained to match the new task (finetuning).
+
+edited by wei li for vgg finetuning
+
 '''
 import tflearn
 from tflearn.data_preprocessing import ImagePreprocessing
@@ -10,6 +13,7 @@ import os
 
 def vgg16(input, num_class):
 
+    #in the model, we added trainable=False to make sure the parameter are not updated during training
     x = tflearn.conv_2d(input, 64, 3, activation='relu', scope='conv1_1',trainable=False)
     x = tflearn.conv_2d(x, 64, 3, activation='relu', scope='conv1_2',trainable=False)
     x = tflearn.max_pool_2d(x, 2, strides=2, name='maxpool1')
@@ -35,7 +39,7 @@ def vgg16(input, num_class):
 
     x = tflearn.fully_connected(x, 4096, activation='relu', scope='fc6')
     x = tflearn.dropout(x, 0.5, name='dropout1')
-
+    #we changed the structure here to let the fc only have 2048, less parameter, enough for our task
     x = tflearn.fully_connected(x, 2048, activation='relu', scope='fc7',restore=False)
     x = tflearn.dropout(x, 0.5, name='dropout2')
 
@@ -82,7 +86,7 @@ model_file = os.path.join(model_path, "vgg16.tflearn")
 model.load(model_file, weights_only=True)
 
 # Start finetuning
-model.fit(X, Y, n_epoch=10, validation_set=0.1, shuffle=True,
+model.fit(X, Y, n_epoch=20, validation_set=0.1, shuffle=True,
           show_metric=True, batch_size=64, snapshot_epoch=False,
           snapshot_step=200, run_id='vgg-finetuning')
 
