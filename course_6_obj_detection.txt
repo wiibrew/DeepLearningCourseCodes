@@ -5,3 +5,5 @@ Faster RCNN examples:
 https://github.com/wiibrew/Faster-RCNN_TF
 model desfine and train:
 https://github.com/wiibrew/Faster-RCNN_TF/blob/master/lib/networks/VGGnet_train.py
+details of layer(loss and RPN):
+https://github.com/wiibrew/Faster-RCNN_TF/blob/master/lib/networks/network.py
