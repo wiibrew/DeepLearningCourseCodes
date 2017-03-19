@@ -1,5 +1,6 @@
 YOLO example:
-https://github.com/wiibrew/Faster-RCNN_TF#installation-sufficient-for-the-demo
+https://github.com/wiibrew/YOLO_tensorflow
+
 
 Faster RCNN examples:
 https://github.com/wiibrew/Faster-RCNN_TF
