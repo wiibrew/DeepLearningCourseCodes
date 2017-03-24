@@ -76,7 +76,7 @@ x = tflearn.input_data(shape=[None, 224, 224, 3], name='input',
 softmax = vgg16(x, num_classes)
 regression = tflearn.regression(softmax, optimizer='adam',
                                 loss='categorical_crossentropy',
-                                learning_rate=0.01, restore=False)
+                                learning_rate=0.0001, restore=False)
 
 model = tflearn.DNN(regression, checkpoint_path='vgg-finetuning',
                     max_checkpoints=3, tensorboard_verbose=2,

@@ -1,5 +1,7 @@
-!.gitignore
-!./model/
-!.git
-!.DS_Store
-!./course_example_vgg/.DS_Store
+/bazel-bin
+/bazel-ci_build-cache
+/bazel-genfiles
+/bazel-out
+/bazel-im2txt
+/bazel-testlogs
+/bazel-tf
