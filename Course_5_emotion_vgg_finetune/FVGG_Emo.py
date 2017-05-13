@@ -3,6 +3,8 @@ Retraining (Finetuning) Example with vgg.tflearn. Using weights from VGG model t
 network for a new task (your own dataset).All weights are restored except
 last layer (softmax) that will be retrained to match the new task (finetuning).
 
+DATASET for this experiment can be obtianed at: https://pan.baidu.com/s/1kUEnhP1
+
 edited by wei li for vgg finetuning
 
 '''
