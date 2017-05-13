@@ -1,6 +1,7 @@
 
 0. install tflearn: pip install git+https://github.com/tflearn/tflearn.git
 1. download the training data and unzip at this folder, dataset from https://drive.google.com/open?id=0B3ANX1iL124qbmxOc2cyQzhvUFE
+if you cannot access to google network, you can download the dataset from baidu cloud drive: https://pan.baidu.com/s/1kUEnhP1
 2. download the pretrained tflearn vgg model from https://www.dropbox.com/s/9li9mi4105jf45v/vgg16.tflearn?dl=0
 3. go through the code, make sure all the path are correct
 
